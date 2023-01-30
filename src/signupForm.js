@@ -31,7 +31,7 @@ function SignupForm(_props) {
 
       const data = { name, surname, email, password };
       axios
-        .post("http://localhost:3333/cadastro", data)
+        .post("http://localhost:3333/conta/cadastro", data)
         .then((response) => {
           console.log(response);
           alert.success("Dados enviados com sucesso!");
