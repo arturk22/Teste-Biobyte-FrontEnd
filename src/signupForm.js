@@ -23,7 +23,7 @@ function SignupForm(_props) {
     }
 
     axios
-    .get(`https://server-biobyte.herokuapp.com/verificaEmail/${email}`)
+    .get(` https://server-biobyte.herokuapp.com/verificaEmail/${email}`)
     .then((response) => {
       if (response === 400) {
         return;
@@ -31,7 +31,7 @@ function SignupForm(_props) {
 
       const data = { name, surname, email, password };
       axios
-        .post("https://server-biobyte.herokuapp.com/conta/cadastro", data)
+        .post(" https://server-biobyte.herokuapp.com/conta/cadastro", data)
         .then((response) => {
           console.log(response);
           alert.success("Dados enviados com sucesso!");
